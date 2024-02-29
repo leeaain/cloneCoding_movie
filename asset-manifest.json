@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/cloneCoding_movie/static/css/main.ae016fda.css",
+    "main.js": "/cloneCoding_movie/static/js/main.0006bac4.js",
+    "index.html": "/cloneCoding_movie/index.html",
+    "main.ae016fda.css.map": "/cloneCoding_movie/static/css/main.ae016fda.css.map",
+    "main.0006bac4.js.map": "/cloneCoding_movie/static/js/main.0006bac4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ae016fda.css",
+    "static/js/main.0006bac4.js"
+  ]
+}
