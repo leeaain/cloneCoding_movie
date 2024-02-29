@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from "react";
 
+import { createBrowserRouter, RouterProvider, Routes, Route } from "react-router-dom";
+
+import "./App.css";
+import Nav from "./routes/Nav";
+import Home from "./routes/Home";
+import About from "./routes/About";
+
+// 클래스형 컴포넌트
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  console.log("App이 실행되었음.");
+  return;
 }
 
 export default App;

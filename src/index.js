@@ -1,17 +1,55 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import { createRoot } from "react-dom/client";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import { BrowserRouter, createBrowserRouter, RouterProvider } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
+
+import App from "./App";
+import Home from "./routes/Home";
+import About from "./routes/About";
+import Nav from "./routes/Nav";
+import Detail from "./routes/Detail";
+
+const root = createRoot(document.getElementById("root"));
+
+// const router = createBrowserRouter([
+//   {
+//     path: "/",
+//     element: (
+//       <div>
+//         <Nav />
+//         <Home />
+//       </div>
+//     ),
+//   },
+//   {
+//     path: "/about",
+//     element: (
+//       <div>
+//         <Nav />
+//         <About />
+//       </div>
+//     ),
+//   },
+//   {
+//     path: "/movie-detail",
+//     element: (
+//       <div>
+//         <Nav />
+//         <Detail />
+//       </div>
+//     ),
+//   },
+// ]);
+// root.render(<App />); // 맨첨 코드
+
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <BrowserRouter>
+    <Nav />
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/movie-detail" element={<Detail />} />
+    </Routes>
+  </BrowserRouter>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
